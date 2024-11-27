@@ -6,14 +6,19 @@ const config: StorybookConfig = {
         "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
     ],
     addons: [
-        "@storybook/addon-onboarding",
+        // "@chromatic-com/storybook",
         "@storybook/addon-essentials",
-        "@chromatic-com/storybook",
         "@storybook/addon-interactions",
+        "@storybook/addon-onboarding",
+        "@storybook/addon-themes",
     ],
     framework: {
         name: "@storybook/nextjs",
         options: {},
+    },
+    core: {
+        disableTelemetry: true,
+        disableWhatsNewNotifications: true,
     },
     staticDirs: ["..\\public"],
 };
